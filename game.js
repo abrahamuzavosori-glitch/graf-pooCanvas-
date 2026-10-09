@@ -63,7 +63,7 @@ class Paddle {
         }
     }
 
-    // Movimiento de la paleta automática (IA) rastreando la pelota más cercana
+   //rastreando la pelota más cercana
     autoMove(balls) {
         let closestBall = balls[0];
         for (let ball of balls) {
@@ -83,7 +83,7 @@ class Paddle {
 // Clase Game (Controla el juego)
 class Game {
     constructor() {
-        // Crear 5 pelotas con diferente tamaño, color y velocidad
+
         this.balls = [
             new Ball(canvas.width / 2, canvas.height / 2, 10, 4, 3, '#FF5733'),
             new Ball(canvas.width / 2, canvas.height / 2, 12, -3, 5, '#33FF57'),
@@ -95,7 +95,7 @@ class Game {
         // Paleta 1 (Jugador): Doble de alto (200px) y color personalizado
         this.paddle1 = new Paddle(0, canvas.height / 2 - 100, 10, 200, true, '#00E5FF');
         // Paleta 2 (CPU): Alto estándar (100px) y color personalizado
-        this.paddle2 = new Paddle(canvas.width - 10, canvas.height / 2 - 50, 10, 200, false, '#FF9100');
+        this.paddle2 = new Paddle(canvas.width - 10, canvas.height / 2 - 50, 10, 100, false, '#FF9100');
 
         this.keys = {};
     }
